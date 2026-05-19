@@ -6,3 +6,18 @@ resource "aws_instance" "ec2" {
         Name = "ankit"       
     } 
 }
+
+# It gives specific verion to aws 
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "ap-south-1"
+}
